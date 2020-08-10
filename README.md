@@ -5,7 +5,7 @@
   <details>
     <summary>⚠️ **Epilepsy Warning**</summary>
 
-        ![result](https://i.imgur.com/PdRio1j.gif)
+  ![result](https://i.imgur.com/PdRio1j.gif)
 
   </details>
 
