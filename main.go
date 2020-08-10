@@ -1,7 +1,7 @@
 package main
 
 import (
-	// i've got some extra imports thats obvious kekw
+	// i've got some extra imports thats obvious
 
 	"os"
 	"fmt"
