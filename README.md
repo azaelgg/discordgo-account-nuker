@@ -2,7 +2,7 @@
   - Feel free to add a pull request, im aware the code is shitty and could've been 50 lines less
 
 # showcase
-  <details>
+  - <details>
     <summary>⚠️ **Epilepsy Warning**</summary>
 
   ![result](https://i.imgur.com/PdRio1j.gif)
