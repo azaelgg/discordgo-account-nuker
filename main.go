@@ -44,11 +44,6 @@ func main() {
 	friendList := getAllFriendsWorker(Session)
 	for _, friend := range friendList {
 		Session.RelationshipDelete(friend)
-		/*
-		if err != nil {
-			fmt.Println("[\u001b[31m-\u001b[0m] := Error removing relationship : " + friend, err)
-		}
-		*/
 		fmt.Println("[\u001b[32m+\u001b[0m] := Relationship removed : " + friend)
 	}
 
@@ -57,8 +52,9 @@ func main() {
 		err := Session.GuildLeave(guild)
 		if err != nil {
 			fmt.Println("[\u001b[31m-\u001b[0m] := Error leaving guild,", err)
+		} else {
+			fmt.Println("[\u001b[32m+\u001b[0m] := Guild left : " + guild)
 		}
-		fmt.Println("[\u001b[32m+\u001b[0m] := Guild left : " + guild)
 	}
 
 }
