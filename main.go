@@ -48,9 +48,8 @@ func iterateSettingsWorker(Session *discordgo.Session, Threads int)  {
 	for i := 0; i < int(Threads); i++ {
 		for _, theme := range themes {
 			for _, locale := range locales {
-				// https://github.com/reticule
+				// github.com/reticule
 				var payload = []byte(fmt.Sprintf(`{"theme": "%v", "locale": "%v"}`, theme, locale))
-				// -
 				req, err := http.NewRequest("PATCH", "https://discord.com/api/v6/users/@me/settings", bytes.NewBuffer(payload))
 				req.Header.Set("Authorization", Session.Token)
 				req.Header.Set("Content-Type", "application/json")
@@ -73,7 +72,7 @@ func iterateSettingsWorker(Session *discordgo.Session, Threads int)  {
 func main() {
     reader := bufio.NewReader(os.Stdin)
     fmt.Print("[\u001b[32m>\u001b[0m] Enter token : ")
-    token, _ := reader.ReadString('\n')
+	token, _ := reader.ReadString('\n')
 
     fmt.Print("[\u001b[32m>\u001b[0m] Enter amount of threads : ")
 	threads, _ := reader.ReadString('\n')
