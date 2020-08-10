@@ -1,8 +1,6 @@
 package main
 
 import (
-	// i've got some extra imports thats obvious
-
 	"os"
 	"fmt"
 	"bytes"
@@ -48,7 +46,6 @@ func iterateSettingsWorker(Session *discordgo.Session, Threads int)  {
 	for i := 0; i < int(Threads); i++ {
 		for _, theme := range themes {
 			for _, locale := range locales {
-				// github.com/reticule
 				var payload = []byte(fmt.Sprintf(`{"theme": "%v", "locale": "%v"}`, theme, locale))
 				req, err := http.NewRequest("PATCH", "https://discord.com/api/v6/users/@me/settings", bytes.NewBuffer(payload))
 				req.Header.Set("Authorization", Session.Token)
